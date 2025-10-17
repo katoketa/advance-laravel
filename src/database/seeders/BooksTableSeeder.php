@@ -14,25 +14,6 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
-            'author_id' => '1',
-            'title' => '海辺のなんとか'
-        ];
-        DB::table('books')->insert($param);
-        $param = [
-            'author_id' => '1',
-            'title' => 'おやすみプンプン'
-        ];
-        DB::table('books')->insert($param);
-        $param = [
-            'author_id' => '1',
-            'title' => 'ムジナ'
-        ];
-        DB::table('books')->insert($param);
-        $param = [
-            'author_id' => '2',
-            'title' => 'ワンピース'
-        ];
-        DB::table('books')->insert($param);
+        Book::factory()->count(5)->create();
     }
 }

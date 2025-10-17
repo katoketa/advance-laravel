@@ -15,29 +15,6 @@ class AuthorsTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
-            'name' => 'inio asano',
-            'age' => 35,
-            'nationality' => 'Japan'
-        ];
-        DB::table('authors')->insert($param);
-        $param =[
-            'name' => 'eiitiro oda',
-            'age' => 20,
-            'nationality' => 'Japan'
-        ];
-        DB::table('authors')->insert($param);
-        $param =[
-            'name' => 'sara',
-            'age' => 45,
-            'nationality' => 'Egyptian'
-        ];
-        DB::table('authors')->insert($param);
-        $param =[
-            'name' => 'saly',
-            'age' => 31,
-            'nationality' => 'Chinese'
-        ];
-        DB::table('authors')->insert($param);
+        Author::factory()->count(3)->create();
     }
 }

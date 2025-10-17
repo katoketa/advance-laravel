@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
+    use HasFactory;
+
     protected $guarded = array('id');
+    
     public static $rules = array(
         'author_id' => 'required',
         'title' => 'required'
